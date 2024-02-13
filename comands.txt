@@ -1,0 +1,22 @@
+docker run --name <nome do container> -e MYSQL_ROOT_PASSWORD=<difine a senha padrão gerada pelo container> -p <porta do pc>:<porta do container> -d <rodar container em background> <nome da imagem>
+docker run --name crud_mysql__py -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql 
+
+--- Comandos SQL ---
+
+Criação do banco de dados
+    CREATE DATABASE mercearia
+
+Criação das tabelas
+    CREATE TABLE produtos (id INT AUTO_INCREMENT PRIMARY KEY, nome VARCHAR(255) NOT NULL, valor FLOAT NOT NULL)
+
+Inserindo dados na tabela
+    INSERT INTO produtos (nome, valor) VALUES ("nome", valor)
+
+Selecionando dados da tabela
+    SELECT * FROM produtos
+
+Deletando dados da tabela
+    DELETE FROM produtos WHERE id=3
+
+Atualizado dados da tabela
+    UPDATE produtos SET valor=valor WHERE id=2
